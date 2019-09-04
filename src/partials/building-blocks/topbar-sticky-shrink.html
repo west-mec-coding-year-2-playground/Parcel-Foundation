@@ -1,0 +1,41 @@
+<header id="header" class="topbar-sticky-shrink-header">
+    <include src="./partials/building-blocks/marketing-site-hero.html"></include>
+</header>
+
+<div data-sticky-container>
+  <div data-sticky data-margin-top='0' data-top-anchor="header:bottom" data-btm-anchor="content:bottom">
+    <div class="top-bar topbar-sticky-shrink">
+      <div class="top-bar-title">
+        <img src="https://placehold.it/150x38" alt="" />
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+            <each loop="item in
+            [
+              { name: 'facebook', link: '/' },
+              { name: 'twitter', link: '/' },
+              { name: 'pinterest', link: '/' },
+              { name: 'envelope', link: '/' },
+            ]">
+            <li class="w-32 h-32 m-8">
+              <a target="_blank" href="{{ item.link }}">
+                      {{ item.name }}
+              </a>
+            </li>
+            <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+          </each>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="expanded row" id="content">
+  <!-- <h3 class="text-center">Creating a sticky Navigation Menu with Top Bar!</h3> -->
+  <include src="./partials/building-blocks/hero-full-screen.html"></include>
+  <!-- <include src="./partials/building-blocks/marketing-site-hero.html"></include> -->
+  <include src="./partials/building-blocks/fullscreen-image-slider.html"></include>
+  <include src="./partials/building-blocks/marketing-site-three-up.html"></include>
+  <include src="./partials/building-blocks/full-width-testimonial.html"></include>
+</div>
